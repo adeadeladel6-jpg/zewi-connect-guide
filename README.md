@@ -1,14 +1,78 @@
-# Welcome to your Lovable project
+# Zway Connect
+
+ابنِ تطبيق ويب حديث، فخم، واحترافي لـ "دليل زوي الرقمي" الخاص ببلدية أولاد رشاش (زوي). يجب أن يتميز الموقع بتصميم راقٍ (دعم الوضع المظلم Dark Mode، تأثيرات Glassmorphism أنيقة، خطوط عربية حديثة، وتصميم متجاوب تماماً مع الشاشات).
+
+
+
+اللغة والاتجاه:
+
+- اللغة الأساسية: اللغة العربية مع دعم كامل للاتجاه من اليمين إلى اليسار (RTL).
+
+- الجمهور المستهدف: سكان وأصحاب المحلات والحرفيين في منطقة زوي.
+
+
+
+الميزات الرئيسية واجهة المستخدم (UI/UX):
+
+1. الهيدر والشعار (Header):
+
+   - شعار حديث بعنوان "دليل زوي الرقمي".
+
+   - زر دعم عبر الواتساب بارز في الأعلى يرتبط مباشرة بالرقم 213674683259+ مع نص جاهز: "مرحباً، لدي استفسار أو مشكلة في موقع دليل زوي".
+
+
+
+2. القسم الرئيسي (Hero Section):
+
+   - شريط بحث ذكي مع فلترة فورية حسب الكلمات المفتاحية أو اسم الخدمة.
+
+   - أزرار تصنيفات للفلترة السريعة (مثل: أطباء وصيدليات، حرفيين وسباكة، محلات وسوبيرات، مطاعم ومقاهي، نقل وتوصيل، خدمات أخرى).
+
+
+
+3. شبكة العرض (Listings Grid):
+
+   - بطاقات عرض فخمة لكل محل/حرفي تحتوي على: اسم النشاط، التصنيف، رقم الهاتف (مع زر اتصل الآن)، العنوان/الموقع في زوي، أوقات العمل، وزر واتساب مباشر.
+
+   - شارة (Badge) للمحلات أو الخدمات "الموثوقة" أو "المميزة".
+
+
+
+4. قسم "أضف نشاطك التجاري":
+
+   - قسم يشجع السكان وأصحاب المحلات على إضافة خدماتهم عبر نموذج بسيط أو بالضغط على زر يحولهم مباشرة للواتساب (213674683259).
+
+
+
+5. لوحة تحكم الإدارة السلسة والمحمية (/admin):
+
+   - الوصول للوحة عبر الرابط: `/admin`.
+
+   - شاشة دخول بسيطة تشترط كلمة السر التالية فقط: `Admin@0674`.
+
+   - هام جداً: تطبيق منطق برمجي سلس عند التحقق من كلمة السر (إزالة الفراغات الزائدة تلقائياً Trim Spaces). عند إدخال الكلمة الصحيحة `Admin@0674` يتم فتح لوحة التحكم فوراً وبشكل مباشر بدون إظهار رسائل خطأ وهمية أو الحاجة لتحديث الصفحة.
+
+   - حفظ حالة التسجيل في الجلسة (Session/LocalStorage) ليبقى المشرف مسجلاً للداخل طوال فترة التصفح.
+
+   - توفير زر "تسجيل الخروج" داخل لوحة التحكم.
+
+   - صلاحيات اللوحة: إضافة بطاقة جديدة، تعديل البطاقات الحالية، حذف بطاقة، تفعيل خيار "مميز"، وإدارة التصنيفات بكل سهولة وبدون كود.
+
+
+
+6. الفوتر (Footer):
+
+   - روابط سريعة، حقوق الطبع والنشر، ورابط التواصل المباشر عبر الواتساب `0674683259`.
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/31fc05c5-8c5a-476f-9c34-c110b23d93d4).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +84,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
