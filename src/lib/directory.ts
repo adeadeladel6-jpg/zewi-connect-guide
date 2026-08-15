@@ -111,6 +111,7 @@ export const DEFAULT_LISTINGS: Listing[] = [
 
 const LISTINGS_KEY = "zoui_listings_v1";
 const CATEGORIES_KEY = "zoui_categories_v1";
+const PENDING_KEY = "zoui_pending_v1";
 export const ADMIN_KEY = "zoui_admin_session";
 
 function read<T>(key: string, fallback: T): T {
@@ -136,4 +137,18 @@ export const loadListings = () => read<Listing[]>(LISTINGS_KEY, DEFAULT_LISTINGS
 export const saveListings = (l: Listing[]) => write(LISTINGS_KEY, l);
 export const loadCategories = () => read<string[]>(CATEGORIES_KEY, DEFAULT_CATEGORIES);
 export const saveCategories = (c: string[]) => write(CATEGORIES_KEY, c);
+export const loadPending = () => read<Listing[]>(PENDING_KEY, []);
+export const savePending = (l: Listing[]) => write(PENDING_KEY, l);
 export const newId = () => `l_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
+
+/** Keeps digits only (also converts Arabic-Indic digits). */
+export function normalizePhone(value: string) {
+  return value
+    .replace(/[\u0660-\u0669]/g, (d) => String(d.charCodeAt(0) - 0x0660))
+    .replace(/[\u06f0-\u06f9]/g, (d) => String(d.charCodeAt(0) - 0x06f0))
+    .replace(/\D/g, "")
+    .slice(0, 10);
+}
+
+export const isValidPhone = (value: string) => /^0\d{9}$/.test(normalizePhone(value));
+
